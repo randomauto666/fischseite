@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fischiges Anglerleben</title>
+<meta name="description" content="Alle Custom-Fische des OPSUCHT-Anglers: Biomgruppen, Seltenheiten, Job-XP und mehr.">
+<link rel="icon" type="image/png" href="https://www.opsucht.net/_astro/logo.DLpTF8_T.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap">
+<style>
+:root{--bg:#06161c;--panel:#0c2530;--line:#1b4150;--ink:#e8f4f2;--mute:#8fb0b5;--accent:#5eead4;
+--Häufig:#9fb3bd;--Episch:#b57bff;--Legendär:#ffb43a;--Spektakulär:#ff5f6d;--Sensation:#35e0ff}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:'Bricolage Grotesque',system-ui,sans-serif;background:radial-gradient(1200px 600px at 50% -10%,#0f4152 0,transparent 70%),var(--bg);color:var(--ink);line-height:1.55;min-height:100vh}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+header{text-align:center;padding:56px 0 28px}
+header img{height:clamp(90px,16vw,150px);width:auto;max-width:90%;filter:drop-shadow(0 10px 24px #0008)}
+h1{font-size:clamp(2.2rem,7vw,4.4rem);font-weight:800;letter-spacing:-.03em;line-height:1.05;margin-top:18px}
+.lead{color:var(--mute);max-width:60ch;margin:14px auto 0}
+nav{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+nav a{padding:6px 14px;border:1px solid var(--line);border-radius:99px;text-decoration:none;color:var(--ink);font-size:.9rem}
+nav a:hover{background:var(--panel)}
+section{padding:34px 0}
+h2{font-size:1.7rem;letter-spacing:-.02em;margin-bottom:14px}
+.tools{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:12px}
+input,select{font:inherit;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:9px 12px}
+input{flex:1 1 220px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.chip{font:inherit;font-size:.88rem;cursor:pointer;color:var(--ink);background:transparent;border:1.5px solid var(--c,var(--line));border-radius:99px;padding:4px 13px}
+.chip[aria-pressed=true]{background:var(--c,var(--accent));color:#04171c;font-weight:600}
+#count{color:var(--mute);font-size:.9rem;margin-bottom:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.card{background:linear-gradient(180deg,var(--panel),#091d26);border:1px solid var(--line);border-top:4px solid var(--c);border-radius:16px;padding:16px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.pic{width:100%;aspect-ratio:1;display:grid;place-items:center;background:radial-gradient(circle at 50% 45%,color-mix(in srgb,var(--c) 28%,transparent),transparent 68%);border:0;border-radius:12px;cursor:zoom-in}
+.pic img{width:72%;height:72%;object-fit:contain;image-rendering:pixelated;filter:drop-shadow(0 6px 10px #0009)}
+.card h3{font-size:1.25rem;margin-top:8px}
+.rar{color:var(--c);font-weight:600;font-size:.95rem}
+.bio{color:var(--mute);font-size:.85rem}
+.more{margin-top:10px;font:inherit;font-size:.8rem;color:var(--mute);background:none;border:1px solid var(--line);border-radius:8px;padding:3px 10px;cursor:pointer}
+.more:hover{color:var(--ink);border-color:var(--mute)}
+.info{margin-top:10px;font-size:.9rem;text-align:left;white-space:pre-line;border-top:1px dashed var(--line);padding-top:10px;width:100%}
+.info.leer{color:var(--mute);font-style:italic}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px}
+.box h3{margin-bottom:8px}
+table{width:100%;border-collapse:collapse;font-size:.92rem}
+td,th{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left}
+th{color:var(--mute);font-weight:600}
+.xp td:last-child,.sz td+td,.sz th+th{text-align:right}
+p+p{margin-top:10px}
+.muted{color:var(--mute)}
+#lb{position:fixed;inset:0;background:#000d;display:none;place-items:center;z-index:9;cursor:zoom-out;padding:20px}
+#lb.on{display:grid}
+#lb img{max-width:min(90vw,520px);width:100%;image-rendering:pixelated}
+footer{text-align:center;color:var(--mute);font-size:.88rem;padding:40px 20px 50px;border-top:1px solid var(--line);margin-top:30px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <img src="https://www.opsucht.net/_astro/logo.DLpTF8_T.png" alt="OPSUCHT Logo">
+  <h1>Fischiges Anglerleben</h1>
+  <p class="lead">Alle Custom-Fische des Angler-Jobs auf einen Blick: Biomgruppe, Seltenheit, Job-XP und eigene Tipps zu jedem Fang.</p>
+  <nav><a href="#fische">Fische</a><a href="#minigame">Minigame</a><a href="#xp">Job-XP</a><a href="#groessen">Größen</a><a href="#extra">Trödel &amp; Schätze</a></nav>
+</header>
+
+<main class="wrap">
+<section id="fische">
+  <h2>Alle Fische</h2>
+  <div class="tools">
+    <input id="q" type="search" placeholder="Fisch suchen …" aria-label="Fisch suchen">
+    <select id="biom" aria-label="Biomgruppe"></select>
+  </div>
+  <div class="chips" id="rar"></div>
+  <div id="count" aria-live="polite"></div>
+  <div class="grid" id="grid"></div>
+</section>
+
+<section id="minigame">
+  <h2>Minigame</h2>
+  <div class="cols">
+    <div class="box"><h3>So funktioniert's</h3>
+      <p>Vanilla-Drops fängst du ganz normal. Beißt ein Custom-Fisch an, startet ein Minigame: Halte den Haken mit der Fang-Actionbar im grünen, wandernden Kreis. Verlässt er den Kreis dauerhaft, löst sich der Fang.</p></div>
+    <div class="box"><h3>„Hier ist zu wenig Wasser zum Angeln!“</h3>
+      <p>Vom Haken aus müssen in 6 Blöcken Umkreis mindestens 30 Wasserblöcke in gerader Linie erreichbar sein (grob 5×6 Blöcke, Tiefe egal). Wirf weiter aufs offene Wasser. Köder und Fang gehen nicht verloren.</p></div>
+    <div class="box"><h3>Biomgruppen</h3>
+      <p>Es zählt das Biom, in dem der Haken landet, nicht dein Standort. Keine Gruppe ist lukrativer als eine andere. Im End sowie in nicht aufgeführten Biomen und auf der Redstone-Welt ist Fischen aktuell nicht möglich.</p>
+      <p class="muted">Das komplette Fischerei-Logbuch bringt bis zu 50 Mio. zusätzliche Job-XP.</p></div>
+  </div>
+</section>
+
+<section id="xp">
+  <h2>Job-XP je Fang</h2>
+  <div class="box"><table class="xp"><thead><tr><th>Kategorie / Seltenheit</th><th>Job-XP</th></tr></thead><tbody id="xpb"></tbody></table></div>
+</section>
+
+<section id="groessen">
+  <h2>Größenklassen</h2>
+  <div class="box">
+    <p>Je größer der Fisch, desto mehr zahlt der Fischerei-NPC. Mit höherem Angler-Level werden größere Fische wahrscheinlicher.</p>
+    <table class="sz" style="margin-top:12px"><thead><tr><th>Level</th><th>Klein</th><th>Mittel</th><th>Groß</th><th>Riesig</th></tr></thead><tbody id="szb"></tbody></table>
+  </div>
+</section>
+
+<section id="extra">
+  <h2>Trödel &amp; Schätze</h2>
+  <div class="cols">
+    <div class="box"><h3>Trödel</h3><p>Schlüssel, Moos, Algen, Schädel, Verrottetes Schild, Treibholz, Altes Fass, Vermodertes Holz.</p></div>
+    <div class="box"><h3>Schätze</h3><p>Verlorenes Amulett, Verlorener Ring, Edelstein, Schatzkarte, Anker, Schöne Muschel, Logbuch, Flaschenpost.</p></div>
+    <div class="box"><h3>Vanilla-Items</h3><p>Roher Kabeljau, Roher Lachs, Kugelfisch, Tropenfisch, Seerosenblatt, Knochen, Namensschild, Nautilusschale. Sie zählen nicht zum Logbuch-Fortschritt.</p></div>
+  </div>
+</section>
+</main>
+
+<div id="lb" role="dialog" aria-label="Großansicht"><img alt=""></div>
+<footer>We are not affiliated with OPSUCHT or Mojang AB.</footer>
+
+<script>
+const IMG="https://items.opsucht.net/";
+const SELT=["Häufig","Episch","Legendär","Spektakulär","Sensation"];
+const XP=[["Vanilla",35],["Häufig",150],["Trödel",175],["Episch",200],["Schatz",275],["Legendär",750],["Spektakulär","3.500"],["Sensation","50.000"]];
+const SZ=[["0–20",90,10,0,0],["20–30",80,20,0,0],["30–35",65,30,5,0],["35–50",50,35,15,0],["50–65",30,35,25,10],["65–85",20,25,30,25],["85–100",10,15,40,35],["100+",5,10,40,45]];
+const $=id=>document.getElementById(id);
+let fische=[],rar=new Set();
+
+$("xpb").innerHTML=XP.map(([k,v])=>`<tr><td${SELT.includes(k)?` style="color:var(--${k});font-weight:600"`:""}>${k}</td><td>${v}</td></tr>`).join("");
+$("szb").innerHTML=SZ.map(r=>`<tr><td>${r[0]}</td>${r.slice(1).map(v=>`<td>${v?v+" %":"–"}</td>`).join("")}</tr>`).join("");
+$("rar").innerHTML=SELT.map(s=>`<button class="chip" style="--c:var(--${s})" aria-pressed="false" data-s="${s}">${s}</button>`).join("");
+$("rar").onclick=e=>{const b=e.target.closest(".chip");if(!b)return;const s=b.dataset.s;rar.has(s)?rar.delete(s):rar.add(s);b.setAttribute("aria-pressed",rar.has(s));render()};
+$("q").oninput=$("biom").onchange=render;
+
+fetch("fische.json").then(r=>r.json()).then(d=>{
+  fische=d.fische;
+  const bioms=[...new Set(fische.map(f=>f.biom))];
+  $("biom").innerHTML='<option value="">Alle Biomgruppen</option>'+bioms.map(b=>`<option>${b}</option>`).join("");
+  render();
+}).catch(()=>{$("grid").textContent="fische.json konnte nicht geladen werden. Öffne die Seite über GitHub Pages oder einen lokalen Webserver."});
+
+function render(){
+  const q=$("q").value.trim().toLowerCase(),b=$("biom").value;
+  const list=fische.filter(f=>(!b||f.biom===b)&&(!rar.size||rar.has(f.seltenheit))&&(!q||f.name.toLowerCase().includes(q)));
+  $("count").textContent=list.length+" von "+fische.length+" Fischen";
+  const g=$("grid");g.innerHTML="";
+  list.forEach(f=>{
+    const c=document.createElement("article");c.className="card";c.style.setProperty("--c",`var(--${f.seltenheit})`);
+    const src=IMG+f.bild+".png";
+    c.innerHTML=`<button class="pic" aria-label="${f.name} vergrößern"><img src="${src}" alt="${f.name}" loading="lazy"></button><h3></h3><div class="rar">${f.seltenheit}</div><div class="bio">${f.biom}</div><button class="more" aria-expanded="false">Infos ▾</button>`;
+    c.querySelector("h3").textContent=f.name;
+    c.querySelector(".pic").onclick=()=>{$("lb").firstElementChild.src=src;$("lb").classList.add("on")};
+    const m=c.querySelector(".more");let box;
+    m.onclick=()=>{
+      if(box){box.remove();box=null;m.textContent="Infos ▾";m.setAttribute("aria-expanded","false");return}
+      box=document.createElement("div");const t=(f.info||"").trim();
+      box.className="info"+(t?"":" leer");box.textContent=t||"Noch keine Infos hinterlegt.";
+      c.appendChild(box);m.textContent="Infos ▴";m.setAttribute("aria-expanded","true");
+    };
+    g.appendChild(c);
+  });
+}
+$("lb").onclick=()=>$("lb").classList.remove("on");
+addEventListener("keydown",e=>{if(e.key==="Escape")$("lb").classList.remove("on")});
+</script>
+</body>
+</html>
