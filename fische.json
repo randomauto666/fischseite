@@ -1,5 +1,15 @@
 {
 "hinweis": "Trage im Feld info Text zu jedem Fisch ein. Zeilenumbruch mit \\n.",
+"biomgruppen":{
+"End":["Das Ende", "Die Leere", "End-Hochland", "End-Kargland", "End-Mittelland", "Kleine Endinseln"],
+"Flüsse & Binnengewässer":["Alm", "Birken-Urwald", "Birkenwald", "Blasser Garten", "Blumenwald", "Dunkler Wald", "Ebene", "Fluss", "Kirschberghain", "Sonnenblumenebene", "Wald"],
+"Kalte & bergige Biome":["Berghain", "Eiszapfentundra", "Fichten-Urtaiga", "Kiefern-Urtaiga", "Taiga", "Tiefes Dunkel", "Tropfsteinhöhlen", "Vereiste Gipfel", "Vereister Fluss", "Verschneite Ebene", "Verschneite Hänge", "Verschneite Taiga", "Zerklüftete Gipfel", "Zerzauste Geröllhügel", "Zerzauste Hügel", "Zerzauster Wald"],
+"Meere & Küsten":["Kalte Tiefsee", "Kalter Ozean", "Lauwarme Tiefsee", "Lauwarmer Ozean", "Ozean", "Steinige Küste", "Strand", "Tiefsee", "Vereiste Tiefsee", "Vereister Ozean", "Verschneiter Strand", "Warmer Ozean"],
+"Nether":["Basaltdeltas", "Karmesinwald", "Nether-Ödland", "Seelensandtal", "Wirrwald"],
+"Plotwelt":[],
+"Sumpf & Tropen":["Bambusdschungel", "Dschungel", "Lichter Dschungel", "Mangrovensumpf", "Sumpf", "Üppige Höhlen"],
+"Warme & trockene Biome":["Abgetragene Tafelberge", "Bewaldete Tafelberge", "Pilzland", "Savanne", "Savannenhochebene", "Steinige Gipfel", "Tafelberge", "Wüste", "Zerzauste Savanne"]
+},
 "fische":[
 {"name": "Dickschädel", "biom": "End", "seltenheit": "Häufig", "bild": "KZBmg6b97PDC", "info": ""},
 {"name": "Wildcods", "biom": "End", "seltenheit": "Häufig", "bild": "bYMpZQqAOrRw", "info": ""},
