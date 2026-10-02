@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fischiges Anglerleben</title>
 <meta name="description" content="Alle Custom-Fische des OPSUCHT-Anglers: Biomgruppen, Seltenheiten, Job-XP und mehr.">
-<link rel="icon" type="image/png" href="op.png">
-<img src="logo.png" alt="OPSUCHT Logo" style="display:block;margin:0 auto;width:min(260px,60vw);height:auto">
+<link rel="icon" type="image/png" href="https://www.opsucht.net/_astro/logo.DLpTF8_T.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap">
 <style>
@@ -34,6 +33,16 @@ input{flex:1 1 220px}
 .chip{font:inherit;font-size:.88rem;cursor:pointer;color:var(--ink);background:transparent;border:1.5px solid var(--c,var(--line));border-radius:99px;padding:4px 13px}
 .chip[aria-pressed=true]{background:var(--c,var(--accent));color:#04171c;font-weight:600}
 #count{color:var(--mute);font-size:.9rem;margin-bottom:12px}
+.bg{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:16px}
+.bg span{display:inline-block;margin:6px 6px 0 0;padding:2px 11px;border-radius:99px;background:#0f3a48;font-size:.88rem}
+.bg .muted{background:none;padding:0;font-style:italic}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-bottom:12px}
+.seg button{font:inherit;background:transparent;color:var(--mute);border:0;padding:8px 16px;cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--accent);color:#04171c;font-weight:600}
+.bch{display:flex;flex-wrap:wrap;gap:4px;justify-content:center;margin-top:6px}
+.bch span{font-size:.72rem;background:#0f3a48;border-radius:99px;padding:1px 8px;color:var(--mute)}
+.box .bch{justify-content:flex-start;gap:6px}
+.box .bch span{font-size:.85rem;padding:2px 11px;color:var(--ink)}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
 .card{background:linear-gradient(180deg,var(--panel),#091d26);border:1px solid var(--line);border-top:4px solid var(--c);border-radius:16px;padding:16px;display:flex;flex-direction:column;align-items:center;text-align:center}
 .pic{width:100%;aspect-ratio:1;display:grid;place-items:center;background:radial-gradient(circle at 50% 45%,color-mix(in srgb,var(--c) 28%,transparent),transparent 68%);border:0;border-radius:12px;cursor:zoom-in}
@@ -63,19 +72,22 @@ footer{text-align:center;color:var(--mute);font-size:.88rem;padding:40px 20px 50
 </head>
 <body>
 <header class="wrap">
+  <img src="https://www.opsucht.net/_astro/logo.DLpTF8_T.png" alt="OPSUCHT Logo">
   <h1>Fischiges Anglerleben</h1>
   <p class="lead">Alle Custom-Fische des Angler-Jobs auf einen Blick: Biomgruppe, Seltenheit, Job-XP und eigene Tipps zu jedem Fang.</p>
-  <nav><a href="#fische">Fische</a><a href="#minigame">Minigame</a><a href="#xp">Job-XP</a><a href="#groessen">Größen</a><a href="#extra">Trödel &amp; Schätze</a></nav>
+  <nav><a href="#fische">Fische</a><a href="#minigame">Minigame</a><a href="#biome">Biome</a><a href="#xp">Job-XP</a><a href="#groessen">Größen</a><a href="#extra">Trödel &amp; Schätze</a></nav>
 </header>
 
 <main class="wrap">
 <section id="fische">
   <h2>Alle Fische</h2>
+  <div class="seg" role="group" aria-label="Ansicht"><button id="m1" aria-pressed="true">Biomgruppen</button><button id="m2" aria-pressed="false">Einzelne Biome</button></div>
   <div class="tools">
     <input id="q" type="search" placeholder="Fisch suchen …" aria-label="Fisch suchen">
     <select id="biom" aria-label="Biomgruppe"></select>
   </div>
   <div class="chips" id="rar"></div>
+  <div class="bg" id="bg" hidden></div>
   <div id="count" aria-live="polite"></div>
   <div class="grid" id="grid"></div>
 </section>
@@ -88,9 +100,15 @@ footer{text-align:center;color:var(--mute);font-size:.88rem;padding:40px 20px 50
     <div class="box"><h3>„Hier ist zu wenig Wasser zum Angeln!“</h3>
       <p>Vom Haken aus müssen in 6 Blöcken Umkreis mindestens 30 Wasserblöcke in gerader Linie erreichbar sein (grob 5×6 Blöcke, Tiefe egal). Wirf weiter aufs offene Wasser. Köder und Fang gehen nicht verloren.</p></div>
     <div class="box"><h3>Biomgruppen</h3>
-      <p>Es zählt das Biom, in dem der Haken landet, nicht dein Standort. Keine Gruppe ist lukrativer als eine andere. Im End sowie in nicht aufgeführten Biomen und auf der Redstone-Welt ist Fischen aktuell nicht möglich.</p>
+      <p>Es zählt das Biom, in dem der Haken landet, nicht dein Standort. Keine Gruppe ist lukrativer als eine andere. In nicht aufgeführten Biomen sowie auf der Redstone-Welt und der Luxury-Island ist Fischen aktuell nicht möglich.</p>
       <p class="muted">Das komplette Fischerei-Logbuch bringt bis zu 50 Mio. zusätzliche Job-XP.</p></div>
   </div>
+</section>
+
+<section id="biome">
+  <h2>Biome</h2>
+  <p class="muted" style="margin-bottom:14px">Welche Biome zu welcher Biomgruppe gehören. Es zählt das Biom, in dem der Haken landet, nicht dein Standort.</p>
+  <div class="cols" id="bgrid"></div>
 </section>
 
 <section id="xp">
@@ -125,30 +143,39 @@ const SELT=["Häufig","Episch","Legendär","Spektakulär","Sensation"];
 const XP=[["Vanilla",35],["Häufig",150],["Trödel",175],["Episch",200],["Schatz",275],["Legendär",750],["Spektakulär","3.500"],["Sensation","50.000"]];
 const SZ=[["0–20",90,10,0,0],["20–30",80,20,0,0],["30–35",65,30,5,0],["35–50",50,35,15,0],["50–65",30,35,25,10],["65–85",20,25,30,25],["85–100",10,15,40,35],["100+",5,10,40,45]];
 const $=id=>document.getElementById(id);
-let fische=[],rar=new Set();
+let fische=[],gruppen={},rar=new Set(),einzeln=false;
+const bl=f=>f.biome||gruppen[f.biom]||[];
 
 $("xpb").innerHTML=XP.map(([k,v])=>`<tr><td${SELT.includes(k)?` style="color:var(--${k});font-weight:600"`:""}>${k}</td><td>${v}</td></tr>`).join("");
 $("szb").innerHTML=SZ.map(r=>`<tr><td>${r[0]}</td>${r.slice(1).map(v=>`<td>${v?v+" %":"–"}</td>`).join("")}</tr>`).join("");
 $("rar").innerHTML=SELT.map(s=>`<button class="chip" style="--c:var(--${s})" aria-pressed="false" data-s="${s}">${s}</button>`).join("");
 $("rar").onclick=e=>{const b=e.target.closest(".chip");if(!b)return;const s=b.dataset.s;rar.has(s)?rar.delete(s):rar.add(s);b.setAttribute("aria-pressed",rar.has(s));render()};
 $("q").oninput=$("biom").onchange=render;
+function setM(e){einzeln=e;$("m1").setAttribute("aria-pressed",!e);$("m2").setAttribute("aria-pressed",e);fillSel();render()}
+$("m1").onclick=()=>setM(false);$("m2").onclick=()=>setM(true);
+function fillSel(){
+  const l=einzeln?[...new Set(fische.flatMap(bl))].sort((a,b)=>a.localeCompare(b,"de")):[...new Set(fische.map(f=>f.biom))];
+  $("biom").innerHTML=`<option value="">${einzeln?"Alle Biome":"Alle Biomgruppen"}</option>`+l.map(x=>`<option>${x}</option>`).join("");
+}
 
 fetch("fische.json").then(r=>r.json()).then(d=>{
-  fische=d.fische;
-  const bioms=[...new Set(fische.map(f=>f.biom))];
-  $("biom").innerHTML='<option value="">Alle Biomgruppen</option>'+bioms.map(b=>`<option>${b}</option>`).join("");
+  fische=d.fische;gruppen=d.biomgruppen||{};
+  fillSel();
+  $("bgrid").innerHTML=Object.entries(gruppen).map(([g,l])=>`<div class="box"><h3>${g}</h3>`+(l.length?'<div class="bch">'+l.map(x=>`<span>${x}</span>`).join("")+"</div>":'<p class="muted">Keine Biome (nur Plotwelt).</p>')+"</div>").join("");
   render();
 }).catch(()=>{$("grid").textContent="fische.json konnte nicht geladen werden. Öffne die Seite über GitHub Pages oder einen lokalen Webserver."});
 
 function render(){
   const q=$("q").value.trim().toLowerCase(),b=$("biom").value;
-  const list=fische.filter(f=>(!b||f.biom===b)&&(!rar.size||rar.has(f.seltenheit))&&(!q||f.name.toLowerCase().includes(q)));
+  const list=fische.filter(f=>(!b||(einzeln?bl(f).includes(b):f.biom===b))&&(!rar.size||rar.has(f.seltenheit))&&(!q||f.name.toLowerCase().includes(q)||(einzeln&&bl(f).some(x=>x.toLowerCase().includes(q)))));
+  const bio=gruppen[b]||[],p=$("bg");p.hidden=!b||einzeln;
+  if(b&&!einzeln)p.innerHTML=`<b>Enthaltene Biome in „${b}“</b><div>`+(bio.length?bio.map(x=>`<span>${x}</span>`).join(""):'<span class="muted">Biome noch nicht eingetragen.</span>')+"</div>";
   $("count").textContent=list.length+" von "+fische.length+" Fischen";
   const g=$("grid");g.innerHTML="";
   list.forEach(f=>{
     const c=document.createElement("article");c.className="card";c.style.setProperty("--c",`var(--${f.seltenheit})`);
     const src=IMG+f.bild+".png";
-    c.innerHTML=`<button class="pic" aria-label="${f.name} vergrößern"><img src="${src}" alt="${f.name}" loading="lazy"></button><h3></h3><div class="rar">${f.seltenheit}</div><div class="bio">${f.biom}</div><button class="more" aria-expanded="false">Infos ▾</button>`;
+    c.innerHTML=`<button class="pic" aria-label="${f.name} vergrößern"><img src="${src}" alt="${f.name}" loading="lazy"></button><h3></h3><div class="rar">${f.seltenheit}</div>${einzeln?`<div class="bch">${bl(f).length?bl(f).map(x=>`<span>${x}</span>`).join(""):"<span>Keine Biome (nur Plotwelt)</span>"}</div>`:`<div class="bio">${f.biom}</div>`}<button class="more" aria-expanded="false">Infos ▾</button>`;
     c.querySelector("h3").textContent=f.name;
     c.querySelector(".pic").onclick=()=>{$("lb").firstElementChild.src=src;$("lb").classList.add("on")};
     const m=c.querySelector(".more");let box;
