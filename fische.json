@@ -9,7 +9,7 @@
 "Plotwelt":[],
 "Sumpf & Tropen":["Bambusdschungel", "Dschungel", "Lichter Dschungel", "Mangrovensumpf", "Sumpf", "Üppige Höhlen"],
 "Warme & trockene Biome":["Abgetragene Tafelberge", "Bewaldete Tafelberge", "Pilzland", "Savanne", "Savannenhochebene", "Steinige Gipfel", "Tafelberge", "Wüste", "Zerzauste Savanne"],
-"Unbekannt":[]
+"Unbekannt":["Sensationsfische - Unbekannt"]
 },
 "fische":[
 {"name": "Dickschädel", "biom": "End", "seltenheit": "Häufig", "bild": "KZBmg6b97PDC", "info": ""},
