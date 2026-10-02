@@ -8,7 +8,8 @@
 "Nether":["Basaltdeltas", "Karmesinwald", "Nether-Ödland", "Seelensandtal", "Wirrwald"],
 "Plotwelt":[],
 "Sumpf & Tropen":["Bambusdschungel", "Dschungel", "Lichter Dschungel", "Mangrovensumpf", "Sumpf", "Üppige Höhlen"],
-"Warme & trockene Biome":["Abgetragene Tafelberge", "Bewaldete Tafelberge", "Pilzland", "Savanne", "Savannenhochebene", "Steinige Gipfel", "Tafelberge", "Wüste", "Zerzauste Savanne"]
+"Warme & trockene Biome":["Abgetragene Tafelberge", "Bewaldete Tafelberge", "Pilzland", "Savanne", "Savannenhochebene", "Steinige Gipfel", "Tafelberge", "Wüste", "Zerzauste Savanne"],
+"Unbekannt":[]
 },
 "fische":[
 {"name": "Dickschädel", "biom": "End", "seltenheit": "Häufig", "bild": "KZBmg6b97PDC", "info": ""},
@@ -23,7 +24,7 @@
 {"name": "Auroralia", "biom": "End", "seltenheit": "Legendär", "bild": "yUS33IlO2eJw", "info": ""},
 {"name": "Voidstachler", "biom": "End", "seltenheit": "Legendär", "bild": "sKxbC3sf2DKU", "info": ""},
 {"name": "Schimmernder Rochen", "biom": "End", "seltenheit": "Spektakulär", "bild": "a6ySArfh4-7v", "info": ""},
-{"name": "Drachenfisch", "biom": "End", "seltenheit": "Sensation", "bild": "McuL3dOdhRsb", "info": ""},
+{"name": "Drachenfisch", "biom": "Unbekannt", "seltenheit": "Sensation", "bild": "McuL3dOdhRsb", "info": ""},
 {"name": "Blauer Sonnenbarsch", "biom": "Flüsse & Binnengewässer", "seltenheit": "Häufig", "bild": "wSCtgOrYCd3U", "info": ""},
 {"name": "Rotauge", "biom": "Flüsse & Binnengewässer", "seltenheit": "Häufig", "bild": "TAvCtDLvByB7", "info": ""},
 {"name": "Barsch", "biom": "Flüsse & Binnengewässer", "seltenheit": "Häufig", "bild": "bURpqFTvYNUX", "info": ""},
@@ -36,7 +37,7 @@
 {"name": "Crappie", "biom": "Flüsse & Binnengewässer", "seltenheit": "Legendär", "bild": "2Z_i1wnKUJH9", "info": ""},
 {"name": "Pico", "biom": "Flüsse & Binnengewässer", "seltenheit": "Legendär", "bild": "6PFZ7xRQMedQ", "info": ""},
 {"name": "Stör", "biom": "Flüsse & Binnengewässer", "seltenheit": "Spektakulär", "bild": "ymi8JV1C5BzK", "info": ""},
-{"name": "Teamlerfisch", "biom": "Flüsse & Binnengewässer", "seltenheit": "Sensation", "bild": "pDRCNi757oEN", "info": ""},
+{"name": "Teamlerfisch", "biom": "Unbekannt", "seltenheit": "Sensation", "bild": "pDRCNi757oEN", "info": ""},
 {"name": "Felsenbarsch", "biom": "Kalte & bergige Biome", "seltenheit": "Häufig", "bild": "F4YzjHHn5bcO", "info": ""},
 {"name": "Wildlachs", "biom": "Kalte & bergige Biome", "seltenheit": "Häufig", "bild": "O3kthMAkQH5n", "info": ""},
 {"name": "Trommlerfisch", "biom": "Kalte & bergige Biome", "seltenheit": "Häufig", "bild": "S2myVTJNEpmS", "info": ""},
@@ -49,7 +50,7 @@
 {"name": "Schwertfisch", "biom": "Kalte & bergige Biome", "seltenheit": "Legendär", "bild": "DxaKiooZNRge", "info": ""},
 {"name": "Mondfisch", "biom": "Kalte & bergige Biome", "seltenheit": "Legendär", "bild": "n_zjuUcvLYXD", "info": ""},
 {"name": "Tintenfisch", "biom": "Kalte & bergige Biome", "seltenheit": "Spektakulär", "bild": "Bxf4ZsC3O8rK", "info": ""},
-{"name": "Creatorfisch", "biom": "Kalte & bergige Biome", "seltenheit": "Sensation", "bild": "JFZf1zAEI5fN", "info": ""},
+{"name": "Creatorfisch", "biom": "Unbekannt", "seltenheit": "Sensation", "bild": "JFZf1zAEI5fN", "info": ""},
 {"name": "Hering", "biom": "Meere & Küsten", "seltenheit": "Häufig", "bild": "GxoC3hHR42PQ", "info": ""},
 {"name": "Auster", "biom": "Meere & Küsten", "seltenheit": "Häufig", "bild": "nefsM6gf_w_F", "info": ""},
 {"name": "Miesmuschel", "biom": "Meere & Küsten", "seltenheit": "Häufig", "bild": "7ZOZioJoY_V1", "info": ""},
@@ -62,7 +63,7 @@
 {"name": "Hummer", "biom": "Meere & Küsten", "seltenheit": "Legendär", "bild": "GH7IcwuUke8c", "info": ""},
 {"name": "Seegurke", "biom": "Meere & Küsten", "seltenheit": "Legendär", "bild": "oSJm4W4OGeu8", "info": ""},
 {"name": "Hai", "biom": "Meere & Küsten", "seltenheit": "Spektakulär", "bild": "17zu8dbYgRAs", "info": ""},
-{"name": "Maselfisch", "biom": "Meere & Küsten", "seltenheit": "Sensation", "bild": "5-P4PiSvpd-G", "info": ""},
+{"name": "Maselfisch", "biom": "Unbekannt", "seltenheit": "Sensation", "bild": "5-P4PiSvpd-G", "info": ""},
 {"name": "Glühfisch", "biom": "Nether", "seltenheit": "Häufig", "bild": "gJ-xK_mTdQE9", "info": ""},
 {"name": "Heißling", "biom": "Nether", "seltenheit": "Häufig", "bild": "_DbSL2C5fLGa", "info": ""},
 {"name": "Kohlspitze", "biom": "Nether", "seltenheit": "Häufig", "bild": "wSUmVaBpr4D-", "info": ""},
@@ -75,7 +76,7 @@
 {"name": "Giftklinger", "biom": "Nether", "seltenheit": "Legendär", "bild": "t_rmNc_EsQOW", "info": ""},
 {"name": "Hitzeflunder", "biom": "Nether", "seltenheit": "Legendär", "bild": "n8GtVQ1C5_EV", "info": ""},
 {"name": "Netheraal", "biom": "Nether", "seltenheit": "Spektakulär", "bild": "ZwrHVPm2hRmH", "info": ""},
-{"name": "Willfisch", "biom": "Nether", "seltenheit": "Sensation", "bild": "ZP-v9z12H_1H", "info": ""},
+{"name": "Willfisch", "biom": "Unbekannt", "seltenheit": "Sensation", "bild": "ZP-v9z12H_1H", "info": ""},
 {"name": "Bonito", "biom": "Plotwelt", "seltenheit": "Häufig", "bild": "90GPrEKLLWRD", "info": ""},
 {"name": "Tilapia", "biom": "Plotwelt", "seltenheit": "Häufig", "bild": "9pOURf6JuoYw", "info": ""},
 {"name": "Zackenbarsch", "biom": "Plotwelt", "seltenheit": "Häufig", "bild": "sAWBA5sAjIiF", "info": ""},
@@ -88,7 +89,7 @@
 {"name": "Entdeckerfisch", "biom": "Plotwelt", "seltenheit": "Legendär", "bild": "IoXkk1VgcvL6", "info": ""},
 {"name": "Maseli", "biom": "Plotwelt", "seltenheit": "Legendär", "bild": "ZDs9gCvDztXe", "info": ""},
 {"name": "Allayfisch", "biom": "Plotwelt", "seltenheit": "Spektakulär", "bild": "H7AFloUq5wGc", "info": ""},
-{"name": "Philfisch", "biom": "Plotwelt", "seltenheit": "Sensation", "bild": "N5ktoXYxwb7S", "info": ""},
+{"name": "Philfisch", "biom": "Unbekannt", "seltenheit": "Sensation", "bild": "N5ktoXYxwb7S", "info": ""},
 {"name": "Frosch", "biom": "Sumpf & Tropen", "seltenheit": "Häufig", "bild": "wxTkQo-svBGh", "info": ""},
 {"name": "Schlingel", "biom": "Sumpf & Tropen", "seltenheit": "Häufig", "bild": "luXZ5IWdOW-f", "info": ""},
 {"name": "Schleicher", "biom": "Sumpf & Tropen", "seltenheit": "Häufig", "bild": "-bbexVfdM0Yi", "info": ""},
@@ -101,7 +102,7 @@
 {"name": "Tarpun", "biom": "Sumpf & Tropen", "seltenheit": "Legendär", "bild": "ifxl3q_ijne-", "info": ""},
 {"name": "Murkel", "biom": "Sumpf & Tropen", "seltenheit": "Legendär", "bild": "qIuWH6OCd0XB", "info": ""},
 {"name": "Knochenhecht", "biom": "Sumpf & Tropen", "seltenheit": "Spektakulär", "bild": "tNbQGHy1-fhH", "info": ""},
-{"name": "Contentfisch", "biom": "Sumpf & Tropen", "seltenheit": "Sensation", "bild": "jMrTK8-n5v7i", "info": ""},
+{"name": "Contentfisch", "biom": "Unbekannt", "seltenheit": "Sensation", "bild": "jMrTK8-n5v7i", "info": ""},
 {"name": "Sardelle", "biom": "Warme & trockene Biome", "seltenheit": "Häufig", "bild": "Wt-EFcPdL_j4", "info": ""},
 {"name": "Sardine", "biom": "Warme & trockene Biome", "seltenheit": "Häufig", "bild": "DwYaeWjO_unb", "info": ""},
 {"name": "Seebarsch", "biom": "Warme & trockene Biome", "seltenheit": "Häufig", "bild": "jRUh8QEpDukA", "info": ""},
@@ -114,6 +115,6 @@
 {"name": "Königsfisch", "biom": "Warme & trockene Biome", "seltenheit": "Legendär", "bild": "vc9SZmId-Qah", "info": ""},
 {"name": "Goldmakrele", "biom": "Warme & trockene Biome", "seltenheit": "Legendär", "bild": "_2hb-fRJeM3q", "info": ""},
 {"name": "Marlin", "biom": "Warme & trockene Biome", "seltenheit": "Spektakulär", "bild": "apVXiabTOczW", "info": ""},
-{"name": "Emmyfisch", "biom": "Warme & trockene Biome", "seltenheit": "Sensation", "bild": "55ZhM42JLC11", "info": ""}
+{"name": "Emmyfisch", "biom": "Unbekannt", "seltenheit": "Sensation", "bild": "55ZhM42JLC11", "info": ""}
 ]
 }
